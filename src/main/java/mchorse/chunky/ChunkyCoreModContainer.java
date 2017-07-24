@@ -15,4 +15,16 @@ public class ChunkyCoreModContainer extends DummyModContainer
     {
         return "chunky_core";
     }
+
+    @Override
+    public Object getMod()
+    {
+        return Chunky.instance;
+    }
+
+    @Override
+    public String getVersion()
+    {
+        return Chunky.VERSION;
+    }
 }
