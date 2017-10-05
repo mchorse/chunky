@@ -1,20 +1,24 @@
 def corePlugin = "mchorse.chunky.ChunkyFMLLoadingPlugin"
 
-buildscript {
-    repositories {
+buildscript 
+{
+    repositories 
+    {
         jcenter()
         maven { url = "http://files.minecraftforge.net/maven" }
     }
-    dependencies {
+    
+    dependencies 
+    {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
     }
 }
+
 apply plugin: 'net.minecraftforge.gradle.forge'
-//Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
 
 
 version = "1.0"
-group= "mchorse.chunky" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = "mchorse.chunky"
 archivesBaseName = "chunky"
 
 sourceCompatibility = targetCompatibility = "1.6" // Need this here so eclipse task generates correctly.
@@ -22,8 +26,9 @@ compileJava {
     sourceCompatibility = targetCompatibility = "1.6"
 }
 
-minecraft {
-    version = "1.11.2-13.20.0.2228"
+minecraft 
+{
+    version = "1.10.2-12.18.3.2185"
     runDir = "run"
     
     clientJvmArgs = ["-Dfml.coreMods.load=$corePlugin"]
@@ -34,8 +39,11 @@ minecraft {
     // stable_#            stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not allways work.
     // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "snapshot_20161220"
+    mappings = "snapshot_20161111"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
+    
+    clientJvmArgs = ["-Xmx1G"]
+    serverJvmArgs = ["-Xmx1G"]
 }
 
 jar {

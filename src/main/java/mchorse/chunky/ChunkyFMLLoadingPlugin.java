@@ -8,7 +8,7 @@ import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.Name;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.SortingIndex;
 
 @Name("ChunkyCore")
-@MCVersion("1.11.2")
+@MCVersion("1.10.2")
 @SortingIndex(1001)
 public class ChunkyFMLLoadingPlugin implements IFMLLoadingPlugin
 {
